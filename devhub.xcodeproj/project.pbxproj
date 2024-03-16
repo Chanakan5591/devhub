@@ -15,6 +15,10 @@
 		B48A72262BA5A214002A5240 /* devhubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A72252BA5A214002A5240 /* devhubTests.swift */; };
 		B48A72302BA5A214002A5240 /* devhubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A722F2BA5A214002A5240 /* devhubUITests.swift */; };
 		B48A72322BA5A214002A5240 /* devhubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A72312BA5A214002A5240 /* devhubUITestsLaunchTests.swift */; };
+		B48A72442BA5A311002A5240 /* BlurWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48A72432BA5A311002A5240 /* BlurWindow.swift */; };
+		B48A72472BA5A558002A5240 /* CodeEditorView in Frameworks */ = {isa = PBXBuildFile; productRef = B48A72462BA5A558002A5240 /* CodeEditorView */; };
+		B48A72492BA5A558002A5240 /* LanguageSupport in Frameworks */ = {isa = PBXBuildFile; productRef = B48A72482BA5A558002A5240 /* LanguageSupport */; };
+		B4D58A1C2BA5C1AA00C4FFA2 /* SwiftDown in Frameworks */ = {isa = PBXBuildFile; productRef = B4D58A1B2BA5C1AA00C4FFA2 /* SwiftDown */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,7 @@
 		B48A722B2BA5A214002A5240 /* devhubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = devhubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B48A722F2BA5A214002A5240 /* devhubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devhubUITests.swift; sourceTree = "<group>"; };
 		B48A72312BA5A214002A5240 /* devhubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = devhubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B48A72432BA5A311002A5240 /* BlurWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48A72492BA5A558002A5240 /* LanguageSupport in Frameworks */,
+				B48A72472BA5A558002A5240 /* CodeEditorView in Frameworks */,
+				B4D58A1C2BA5C1AA00C4FFA2 /* SwiftDown in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +105,7 @@
 		B48A72102BA5A212002A5240 /* devhub */ = {
 			isa = PBXGroup;
 			children = (
+				B48A723E2BA5A247002A5240 /* views */,
 				B48A72112BA5A212002A5240 /* devhubApp.swift */,
 				B48A72132BA5A212002A5240 /* ContentView.swift */,
 				B48A72152BA5A212002A5240 /* Item.swift */,
@@ -132,6 +141,14 @@
 			path = devhubUITests;
 			sourceTree = "<group>";
 		};
+		B48A723E2BA5A247002A5240 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				B48A72432BA5A311002A5240 /* BlurWindow.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,6 +165,11 @@
 			dependencies = (
 			);
 			name = devhub;
+			packageProductDependencies = (
+				B48A72462BA5A558002A5240 /* CodeEditorView */,
+				B48A72482BA5A558002A5240 /* LanguageSupport */,
+				B4D58A1B2BA5C1AA00C4FFA2 /* SwiftDown */,
+			);
 			productName = devhub;
 			productReference = B48A720E2BA5A212002A5240 /* devhub.app */;
 			productType = "com.apple.product-type.application";
@@ -220,6 +242,10 @@
 				Base,
 			);
 			mainGroup = B48A72052BA5A212002A5240;
+			packageReferences = (
+				B48A72452BA5A558002A5240 /* XCRemoteSwiftPackageReference "CodeEditorView" */,
+				B4D58A1A2BA5C1AA00C4FFA2 /* XCRemoteSwiftPackageReference "SwiftDown" */,
+			);
 			productRefGroup = B48A720F2BA5A212002A5240 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -262,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48A72442BA5A311002A5240 /* BlurWindow.swift in Sources */,
 				B48A72142BA5A212002A5240 /* ContentView.swift in Sources */,
 				B48A72162BA5A212002A5240 /* Item.swift in Sources */,
 				B48A72122BA5A212002A5240 /* devhubApp.swift in Sources */,
@@ -621,6 +648,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B48A72452BA5A558002A5240 /* XCRemoteSwiftPackageReference "CodeEditorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mchakravarty/CodeEditorView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.13.0;
+			};
+		};
+		B4D58A1A2BA5C1AA00C4FFA2 /* XCRemoteSwiftPackageReference "SwiftDown" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/qeude/SwiftDown.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B48A72462BA5A558002A5240 /* CodeEditorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B48A72452BA5A558002A5240 /* XCRemoteSwiftPackageReference "CodeEditorView" */;
+			productName = CodeEditorView;
+		};
+		B48A72482BA5A558002A5240 /* LanguageSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B48A72452BA5A558002A5240 /* XCRemoteSwiftPackageReference "CodeEditorView" */;
+			productName = LanguageSupport;
+		};
+		B4D58A1B2BA5C1AA00C4FFA2 /* SwiftDown */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B4D58A1A2BA5C1AA00C4FFA2 /* XCRemoteSwiftPackageReference "SwiftDown" */;
+			productName = SwiftDown;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B48A72062BA5A212002A5240 /* Project object */;
 }
